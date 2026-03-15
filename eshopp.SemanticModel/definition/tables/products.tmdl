@@ -1,0 +1,85 @@
+table products
+	lineageTag: 8c3d27a0-eceb-4381-9341-364ef4f28ede
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 468afc00-62be-41eb-bff7-6a5a18a7aa77
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: f3a05807-d51c-49d2-b0a2-e91bdbd40e59
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_category
+		dataType: string
+		lineageTag: 3759185c-7828-44c1-bbb7-017d3c8df7ac
+		summarizeBy: none
+		sourceColumn: product_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_brand
+		dataType: string
+		lineageTag: 6f8f64fd-37bc-4c83-8fc1-392378ad9df7
+		summarizeBy: none
+		sourceColumn: product_brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_model
+		dataType: string
+		lineageTag: 4ded4189-f74b-460a-a6b4-df830aed83d4
+		summarizeBy: none
+		sourceColumn: product_model
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_list_price
+		dataType: double
+		lineageTag: b28b437c-67fa-4e21-8da4-9983b4bcba51
+		summarizeBy: none
+		sourceColumn: product_list_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_standard_cost
+		dataType: double
+		lineageTag: fd2c7e90-3ce1-4328-ba83-e8205da1a06f
+		summarizeBy: none
+		sourceColumn: product_standard_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_is_active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0dfa2780-bc39-41df-97f0-0cb4f71aabb2
+		summarizeBy: none
+		sourceColumn: product_is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition products = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\vboxuser\Documents\Data Projects\dataviz-project\products.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_id", Int64.Type}, {"product_name", type text}, {"product_category", type text}, {"product_brand", type text}, {"product_model", type text}, {"product_list_price", type number}, {"product_standard_cost", type number}, {"product_is_active", type logical}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

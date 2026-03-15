@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "eshopp"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "24b5d44d-4772-41df-a880-0e87c77a841d"
+  }
+}

@@ -1,0 +1,44 @@
+relationship 77d4351b-802c-4660-aaa1-e816d4270907
+	joinOnDateBehavior: datePartOnly
+	fromColumn: customers.customer_signup_date
+	toColumn: LocalDateTable_cb8f1456-e41e-411b-922f-4e8057381b41.Date
+
+relationship e879de03-7dd3-4c88-bb75-898d7b467e0b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: website_sessions.session_date
+	toColumn: LocalDateTable_731a5db5-03e1-4111-9a51-89996010fb36.Date
+
+relationship AutoDetected_96c206b4-6dc4-4b05-8f16-6c1744eb5b9a
+	fromColumn: website_sessions.customer_id
+	toColumn: customers.customer_id
+
+relationship AutoDetected_42bd8950-10fc-4b4c-823f-9fead44030e3
+	fromColumn: sales.customer_id
+	toColumn: customers.customer_id
+
+relationship e8d3b2c3-9790-40c3-8c24-afb3d03e2bc3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dates.date
+	toColumn: LocalDateTable_2f06c935-0bc7-4421-8d03-5bd4b8f2f9ce.Date
+
+relationship AutoDetected_d18b5edb-98b1-438d-98e9-1e8418430c22
+	fromColumn: sales.date_id
+	toColumn: dates.date_id
+
+relationship AutoDetected_32797dbe-90c4-4ba6-b2e5-42e3f9b38471
+	fromColumn: sales.product_id
+	toColumn: products.product_id
+
+relationship ca6d9882-2512-4b5e-9cc3-033481a8deb7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: stores.store_open_date
+	toColumn: LocalDateTable_a6903750-5637-4979-97d7-7efc8a27237a.Date
+
+relationship AutoDetected_c758a23c-c78f-4bf5-b797-9f59d5418b15
+	fromColumn: website_sessions.store_id
+	toColumn: stores.store_id
+
+relationship AutoDetected_78ade742-5f2d-4db9-9cf8-2000e5c274a2
+	fromColumn: sales.store_id
+	toColumn: stores.store_id
+
