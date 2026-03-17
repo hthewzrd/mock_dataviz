@@ -3,8 +3,15 @@
 
 // Select "Run" to try this sample DAX query.
 EVALUATE
-SELECT(
-	customers,
-	"customer_name", customers[customer_name],
-	"customer_age", customers[customer_age]
+ADDCOLUMNS (
+    'sales',
+    "sale_price", 'sales'[price],
+    "days_before_migration", -- Plural as requested
+    DATEDIFF (
+        RELATED ( 'dates'[date] ), -- Pulls the pre-formatted Date object
+        DATE ( 2025, 2, 14 ),
+        DAY
+    )
 )
+ORDER BY
+    [days_before_migration] DESC
