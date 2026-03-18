@@ -52,5 +52,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b3259fd8bb9adf6f68af",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sales"
+              }
+            },
+            "Property": "total_revenue"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
