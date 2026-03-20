@@ -4,10 +4,10 @@
   "position": {
     "x": 649,
     "y": 0,
-    "z": 1,
+    "z": 1000,
     "height": 720,
     "width": 631,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -108,79 +108,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d045f1ac900153e41543",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "sales"
-              }
-            },
-            "Property": "total_units_sold"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b75218076ffa040aaf56",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "customers"
-              }
-            },
-            "Property": "customer_avg_age"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "84f99c9ac3109b497ad3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "sales"
-              }
-            },
-            "Property": "revenue_in_feb"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "daca2165c44783a89443",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "stores"
-              }
-            },
-            "Property": "oldest_store_open_date"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a1d7cfd5940540555636",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "website_sessions"
-              }
-            },
-            "Property": "session_quality_score_avg_scaled"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
