@@ -10,7 +10,7 @@ table sales
 		formatString: 0
 		lineageTag: e4c7857d-0168-493e-81ec-a65081c98d05
 
-	measure discounted_revenue = SUMX(sales, sales[sale_quantity] * sales[discounted_price])
+	measure discounted_revenue = SUMX(sales, sales[discounted_price])
 		lineageTag: 6c62fbcf-052c-4d91-9104-7040d29251c9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
