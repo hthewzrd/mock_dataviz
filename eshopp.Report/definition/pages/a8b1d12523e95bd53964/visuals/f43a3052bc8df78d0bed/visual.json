@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "183d2064b956bebeedb3",
+  "name": "f43a3052bc8df78d0bed",
   "position": {
-    "x": 651,
+    "x": 10.4774897680764,
     "y": 0,
-    "z": 1000,
-    "height": 719,
-    "width": 629,
-    "tabOrder": 1000
+    "z": 0,
+    "height": 719.45429740791269,
+    "width": 1269.5225102319237,
+    "tabOrder": 0
   },
   "visual": {
-    "visualType": "waterfallChart",
+    "visualType": "ribbonChart",
     "query": {
       "queryState": {
         "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dates"
+                    }
+                  },
+                  "Property": "date_weekday"
+                }
+              },
+              "queryRef": "dates.date_weekday",
+              "nativeQueryRef": "date_weekday",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
           "projections": [
             {
               "field": {
@@ -27,8 +46,7 @@
                 }
               },
               "queryRef": "products.product_category",
-              "nativeQueryRef": "product_category",
-              "active": true
+              "nativeQueryRef": "product_category"
             }
           ]
         },
@@ -69,21 +87,6 @@
         ],
         "isDefaultSort": true
       }
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Revenue by Product Category'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   }

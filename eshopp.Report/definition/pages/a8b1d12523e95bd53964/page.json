@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "a8b1d12523e95bd53964",
+  "displayName": "Rankings",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}
